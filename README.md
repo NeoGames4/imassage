@@ -32,4 +32,5 @@ When decoding:
 - *.pdf-support
 - String encryption (with multiple algorithms)
 - Support of some other file formats (maybe even non-image files)
-Not sure when or if I'll update it.
+
+Not sure when or if I'll update it (but it's definitely not done yet).
