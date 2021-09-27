@@ -1,7 +1,6 @@
 from shutil import copy
 import os
 import time
-import base64
 
 def encode(key, text):
 	return text
