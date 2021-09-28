@@ -3,10 +3,24 @@ import os
 import time
 
 def encode(key, text):
-	return text
+	if(len(key) < 1):
+		return text
+	encrypted = []
+	for i, char in enumerate(text):
+		k = ord(key[i % len(key)])
+		m = ord(char)
+		encrypted.append(chr((k + m) % 127))
+	return ''.join(encrypted)
 
 def decode(key, text):
-	return text
+	if(len(key) < 1):
+		return text
+	message = []
+	for i, char in enumerate(text):
+		k = ord(key[i % len(key)])
+		m = ord(char)
+		message.append(chr((-k + m) % 127))
+	return ''.join(message)
 
 print('\nWelcome to imassages!\n')
 print('Please select a destination (by typing a number):\n' +
